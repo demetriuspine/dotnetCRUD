@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using dotnetCRUD.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MyContext>
+    (options =>
+    {
+        options.UseSqlServer("Data Source=DESKTOP-OJV4FNN;Initial Catalog=Products;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+    });
 
 var app = builder.Build();
 
