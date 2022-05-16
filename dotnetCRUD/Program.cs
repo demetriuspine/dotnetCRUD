@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MyContext>
     (options =>
     {
-        options.UseSqlServer("Data Source=DESKTOP-OJV4FNN;Initial Catalog=Products;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+        options.UseSqlServer("Data Source=DESKTOP-OJV4FNN;Initial Catalog=Products;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"); // Update-database -Context Contexto
     });
 
 var app = builder.Build();
